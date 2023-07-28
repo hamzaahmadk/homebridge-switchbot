@@ -185,9 +185,9 @@ export class AirConditioner {
       const commandType: string = await this.commandType();
       const command: string = await this.commandOn();
       const bodyChange = JSON.stringify({
-        'command': command,
-        'parameter': 'default',
-        'commandType': commandType,
+        'command': 'swing',
+        'parameter': 'false',
+        'commandType': 'command',
       });
       await this.pushChanges(bodyChange);
     }
